@@ -15,7 +15,7 @@
     <name>jwt-email</name>
     <description>Curriculum</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
     </properties>
     
     
