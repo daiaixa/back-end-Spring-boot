@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/educacion")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "*")
 public class educacionController {
 
     @Autowired
@@ -39,7 +39,7 @@ public class educacionController {
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         }
         eduService.borrarEducacion(id);
-        return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educación eliminada"), HttpStatus.OK);
     }
     
 
@@ -55,7 +55,7 @@ public class educacionController {
                 dtoedu.getFecha_inicio(), dtoedu.getFecha_fin()
         );
         eduService.crearEducacion(educacion);
-        return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educación creada"), HttpStatus.OK);
     }
     
  
@@ -78,7 +78,7 @@ public class educacionController {
         
         eduService.crearEducacion(educacion);
         
-        return new ResponseEntity(new Mensaje("Educacion actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Educación actualizada"), HttpStatus.OK);
     }
     
     

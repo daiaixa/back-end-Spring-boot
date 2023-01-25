@@ -15,8 +15,9 @@
     <name>jwt-email</name>
     <description>Curriculum</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>1.8</java.version>
     </properties>
+    
     
     <dependencies>        
         <dependency>
@@ -82,7 +83,7 @@
             <artifactId>jakarta.validation-api</artifactId>
             <type>jar</type>
         </dependency>
-
+        
     </dependencies>
     
 

@@ -1,6 +1,5 @@
 package com.example.porfolio.controller;
 
-import antlr.StringUtils;
 import com.example.porfolio.dto.ExperienciaDto;
 import com.example.porfolio.dto.Mensaje;
 
@@ -23,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/experiencia")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "*")
 public class experienciaController {
 
     @Autowired
