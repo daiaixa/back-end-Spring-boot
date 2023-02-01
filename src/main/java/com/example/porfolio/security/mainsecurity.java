@@ -47,10 +47,10 @@ public class mainsecurity extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
-                .authorizeHttpRequests()
+                .authorizeHttpRequests(authorize -> authorize
                 .antMatchers("/**").permitAll()
-                .anyRequest().authenticated()
-                .and()
+                .anyRequest().authenticated())
+                
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
                 .and()
                 .sessionManagement​().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
